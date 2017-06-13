@@ -1,22 +1,22 @@
 //=============================================================================
-// Copyright © 2008 Point Grey Research, Inc. All Rights Reserved.
+// Copyright © 2017 FLIR Integrated Imaging Solutions, Inc. All Rights Reserved.
 //
-// This software is the confidential and proprietary information of Point
-// Grey Research, Inc. ("Confidential Information").  You shall not
-// disclose such Confidential Information and shall use it only in
+// This software is the confidential and proprietary information of FLIR
+// Integrated Imaging Solutions, Inc. ("Confidential Information"). You
+// shall not disclose such Confidential Information and shall use it only in
 // accordance with the terms of the license agreement you entered into
-// with Point Grey Research, Inc. (PGR).
+// with FLIR Integrated Imaging Solutions, Inc. (FLIR).
 //
-// PGR MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF THE
+// FLIR MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF THE
 // SOFTWARE, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE
 // IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-// PURPOSE, OR NON-INFRINGEMENT. PGR SHALL NOT BE LIABLE FOR ANY DAMAGES
+// PURPOSE, OR NON-INFRINGEMENT. FLIR SHALL NOT BE LIABLE FOR ANY DAMAGES
 // SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
 // THIS SOFTWARE OR ITS DERIVATIVES.
 //=============================================================================
 
 //=============================================================================
-// $Id: FlyCapture2Defs.h 248861 2015-09-21 20:44:44Z bradens $
+// $Id: FlyCapture2Defs.h 318533 2017-03-09 22:41:16Z corinal $
 //=============================================================================
 
 #ifndef PGR_FC2_FLYCAPTURE2DEFS_H
@@ -38,6 +38,7 @@
 #ifndef FULL_32BIT_VALUE
 #define FULL_32BIT_VALUE 0x7FFFFFFF
 #endif
+
 
 namespace FlyCapture2
 {
@@ -420,6 +421,8 @@ namespace FlyCapture2
 		IPP,
 		/** Best quality but much faster than rigorous. */
 		DIRECTIONAL_FILTER,
+		/** Weighted pixel average from different directions*/
+		WEIGHTED_DIRECTIONAL_FILTER,
 
 		COLOR_PROCESSING_ALGORITHM_FORCE_32BITS = FULL_32BIT_VALUE
 	};
@@ -643,12 +646,8 @@ namespace FlyCapture2
 		IPAddress destinationIpAddress;
 		/** Source UDP port of the stream channel. Read only. */
 		unsigned int sourcePort;
-		/** Host port on the PC where the camera will send the data stream.
-		  This is deprecated, use hostPort instead. */
-		unsigned int& hostPost;
 
 		GigEStreamChannel()
-			: hostPost(hostPort)
 		{
 			networkInterfaceIndex = 0;
 			hostPort = 0;
@@ -910,7 +909,7 @@ namespace FlyCapture2
 		/** Grab mode for the camera. The default is DROP_FRAMES. */
 		GrabMode grabMode;
 
-		/** This parameter enables RetireveBuffer to run in high
+		/** This parameter enables RetrieveBuffer to run in high
 		 *	performance mode.  This means that any interaction
 		 *  with the camera, other then grabbing the image is disabled.
 		 *	Currently Retrieve buffer reads registers on the camera to
@@ -1064,7 +1063,10 @@ namespace FlyCapture2
 		PropertyType type;
 		/** Flag indicating if the property is present. */
 		bool present;
-		/** Flag controlling absolute mode. */
+		/**
+         * Flag controlling absolute mode (real world units)
+         * or non-absolute mode (camera internal units).
+         */
 		bool absControl;
 		/** Flag controlling one push. */
 		bool onePush;
@@ -1072,14 +1074,20 @@ namespace FlyCapture2
 		bool onOff;
 		/** Flag controlling auto. */
 		bool autoManualMode;
-		/** Value A (integer). */
+		/**
+         * Value A (integer).
+         * Used to configure properties in non-absolute mode.
+         */
 		unsigned int valueA;
 		/**
-		 * Value B (integer). Applies only to the white balance blue value. Use
-		 * Value A for the red value.
-		 */
+         * Value B (integer). For white balance, value B applies to the blue value and
+         * value A applies to the red value.
+         */
 		unsigned int valueB;
-		/** Floating point value. */
+		/**
+		* Floating point value.
+		* Used to configure properties in absolute mode.
+		*/
 		float absValue;
 		/** Reserved for future use. */
 		unsigned int reserved[8];
@@ -1823,11 +1831,76 @@ namespace FlyCapture2
 		}
 	};
 
+	/* Callback function typedef: a function accepting pointer-to-void input as its sole
+	 * argument, and returns void (ie: nothing).
+	 */
+	typedef void (*CameraEventCallback)(void* data);
+
+	/** Options for enabling device event registration. */
+	struct EventOptions
+	{
+		/** Callback function pointer */
+		CameraEventCallback EventCallbackFcn;
+
+		/** Event name to register */
+		const char* EventName;
+
+		/** Pointer to callback data to be passed to the callback function */
+		const void* EventUserData;
+
+		/** Size of the underlying struct passed as eventCallbackData for sanity checks */
+		size_t EventUserDataSize;
+	};
+
+
+	/* Callback data passed to the callback function provided when using
+	 * RegisterEvent() or RegisterAllEvents().
+	 */
+	struct EventCallbackData
+	{
+		/** Pointer to the user-supplied data struct */
+		void* EventUserData;
+
+		/** Size of the user data data supplied to the RegisterEvent()
+		 * function.
+		 */
+		size_t EventUserDataSize;
+
+		/** The event name used to register the event. Provided so the user
+		 * knows which event triggered the callback.
+		 */
+		const char* EventName;
+
+		/** The device register which EventName maps to. Provides an alternate
+		 * means of indexing into different event types.
+		 */
+		long long unsigned EventID;
+
+		/** Timestamp indicated the time (as reported by the camera) at which
+		 * the camera exposure operation completed. This can be compared with
+		 * image stimestamps if there is a need to map event timestamps to
+		 * specific images, if applicable.
+		 */
+		long long unsigned EventTimestamp;
+
+		/** A pointer to additional data pertaining to the event which just
+		 * trigger the callback function. The data may be of difference sizes
+		 * or may not even be allocated, depending on the type of event which
+		 * triggered the callback.
+		 */
+		void* EventData;
+
+		/** The size of the structure pointed to by EventData. This value should
+		 * be checked, especially if there are events which can trigger variable-
+		 * length event data to be returned to the user when the callback function
+		 * is issued.
+		 */
+		size_t EventDataSize;
+	};
 	/*@}*/
 
 	/*@}*/
 
-/* #pragma deprecated(hostPost) */
 }
 
 #endif // PGR_FC2_FLYCAPTURE2DEFS_H
