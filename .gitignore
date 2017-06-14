@@ -1,15 +1,10 @@
-bin
-lib
-include
-db
-dbd
-*_BAK.adl
-documentation.html
-envPaths*
-cdCommands
-dllPath.bat
-auto_settings.sav*
-configure/*.local
-O.*/
-*~
-*.swp
+# Ignore build files/directories
+build.log
+RELEASE_SITE
+configure/build.log
+O.*
+db/
+dbd/
+include/
+lib/
+pointGreySupport.bak/
