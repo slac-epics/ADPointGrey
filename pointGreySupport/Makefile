@@ -29,7 +29,7 @@ LIB_INSTALLS    += ../os/win32-x86/FlyCapture2.lib
 else ifeq (rhel7-x86_64, $(findstring rhel7-x86_64, $(T_A)))
 LIB_INSTALLS    += ../os/rhel7-x86_64/libflycapture.so
 LIB_INSTALLS    += ../os/rhel7-x86_64/libflycapture.so.2
-LIB_INSTALLS    += ../os/rhel7-x86_64/libflycapture.so.2.11.3.121
+LIB_INSTALLS    += ../os/rhel7-x86_64/libflycapture.so.2.9.3.43
 
 endif
 
