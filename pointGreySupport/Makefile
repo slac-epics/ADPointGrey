@@ -26,15 +26,10 @@ LIB_INSTALLS    += ../os/windows-x64/FlyCapture2.lib
 else ifeq (win32-x86, $(findstring win32-x86, $(T_A)))
 LIB_INSTALLS    += ../os/win32-x86/FlyCapture2.lib
 
-else ifeq (linux-x86_64, $(findstring linux-x86_64, $(T_A)))
-LIB_INSTALLS    += ../os/linux-x86_64/libflycapture.so
-LIB_INSTALLS    += ../os/linux-x86_64/libflycapture.so.2
-LIB_INSTALLS    += ../os/linux-x86_64/libflycapture.so.2.8.3.1
-
-else ifeq (linux-x86, $(findstring linux-x86, $(T_A)))
-LIB_INSTALLS    += ../os/linux-x86/libflycapture.so
-LIB_INSTALLS    += ../os/linux-x86/libflycapture.so.2
-LIB_INSTALLS    += ../os/linux-x86/libflycapture.so.2.8.3.1
+else ifeq (rhel7-x86_64, $(findstring rhel7-x86_64, $(T_A)))
+LIB_INSTALLS    += ../os/rhel7-x86_64/libflycapture.so
+LIB_INSTALLS    += ../os/rhel7-x86_64/libflycapture.so.2
+LIB_INSTALLS    += ../os/rhel7-x86_64/libflycapture.so.2.11.3.121
 
 endif
 
