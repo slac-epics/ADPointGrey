@@ -1,22 +1,22 @@
 //=============================================================================
-// Copyright © 2017 FLIR Integrated Imaging Solutions, Inc. All Rights Reserved.
+// Copyright © 2008 Point Grey Research, Inc. All Rights Reserved.
 //
-// This software is the confidential and proprietary information of FLIR
-// Integrated Imaging Solutions, Inc. ("Confidential Information"). You
-// shall not disclose such Confidential Information and shall use it only in
+// This software is the confidential and proprietary information of Point
+// Grey Research, Inc. ("Confidential Information").  You shall not
+// disclose such Confidential Information and shall use it only in
 // accordance with the terms of the license agreement you entered into
-// with FLIR Integrated Imaging Solutions, Inc. (FLIR).
+// with Point Grey Research, Inc. (PGR).
 //
-// FLIR MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF THE
+// PGR MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF THE
 // SOFTWARE, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE
 // IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-// PURPOSE, OR NON-INFRINGEMENT. FLIR SHALL NOT BE LIABLE FOR ANY DAMAGES
+// PURPOSE, OR NON-INFRINGEMENT. PGR SHALL NOT BE LIABLE FOR ANY DAMAGES
 // SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
 // THIS SOFTWARE OR ITS DERIVATIVES.
 //=============================================================================
 
 //=============================================================================
-// $Id: CameraBase.h 316355 2017-02-20 23:02:28Z alin $
+// $Id: CameraBase.h 244578 2015-08-21 23:30:57Z matthewg $
 //=============================================================================
 
 #ifndef PGR_FC2_CAMERABASE_H_
@@ -82,8 +82,7 @@ namespace FlyCapture2
 
 			/**
 			 * Disconnects the camera object from the camera. This allows another
-			 * physical camera specified by a GUID to be connected to the camera
-			 * object.
+			 * physical camera to be connected to the camera object.
 			 *
 			 * @see Connect()
 			 *
@@ -92,13 +91,13 @@ namespace FlyCapture2
 			virtual Error Disconnect() = 0;
 
 			/**
-			 * Checks if the camera object is connected to a physical camera
-			 * specified by a GUID.
+			 * Checks if the camera object is currently connected to a physical
+			 * camera.
 			 *
 			 * @see Connect()
 			 * @see Disconnect()
 			 *
-			 * @return Whether Connect() was called on the camera object.
+			 * @return Whether the camera object is connected to a physical camera.
 			 */
 			virtual bool IsConnected() = 0;
 
@@ -331,8 +330,7 @@ namespace FlyCapture2
 			 * property type must be specified in the Property structure passed
 			 * into the function in order for the function to succeed.
 			 * The absControl flag controls whether the absolute or integer value
-			 * is written to the camera. Use GetPropertyInfo() to query which 
-			 * options are available for a specific property.
+			 * is written to the camera.
 			 *
 			 * @param pProp Pointer to the Property structure to be used.
 			 * @param broadcast Whether the action should be broadcast.
@@ -868,63 +866,10 @@ namespace FlyCapture2
 			/*
 			 * Reset the camera diagnostic infomation.
 			 *
+			 *
 			 * @return An Error indicating the success or failure of the function.
 			 */
 			virtual Error ResetStats() = 0;
-
-			/*
-			 * Register the camera to issue a custom callback function call for a
-			 * specific device event.
-			 *
-			 * @param pOpts Pointer to the EventOptions structure which defines the
-			 *              callback function to use, the event for which to register
-			 *              the device, and a pointer to user data (optional) to be
-			 *              passed to the callback function.
-			 *
-			 * @return An Error indicating the success or failure of the function.
-			 */
-			virtual Error RegisterEvent( EventOptions* pOpts ) = 0;
-
-			/*
-			 * De-register an event previously registered with the camera.
-			 *
-			 * @param pOpts Pointer to the EventOptions structure which defines the
-			 *              callback function to use, the event for which to register
-			 *              the device, and a pointer to user data (optional) to be
-			 *              passed to the callback function. The callback function and
-			 *              user data elements of the EventOptions structure are ignored
-			 *              in this call, and just the event name within the structure is
-			 *              used with this function call.
-			 *
-			 * @return An Error indicating the success or failure of the function.
-			 */
-			virtual Error DeregisterEvent( EventOptions* pOpts ) = 0;
-			
-			/*
-			 * Register the camera to issue a custom callback function call for a
-			 * specific device event.
-			 *
-			 * @param pOpts Pointer to the EventOptions structure which defines the
-			 *              callback function to use, the event for which to register
-			 *              the device, and a pointer to user data (optional) to be
-			 *              passed to the callback function. The event name element of
-			 *              the structure is ignored with this function call. If a single
-			 *              event has already been registered via RegisterEvent(), this
-			 *              call will fail, as the user could accidentally change the
-			 *              the internal callback function pointer for a queued event.
-			 *              The user will need to de-register all registered events,
-			 *              then call this function again.
-			 *
-			 * @return An Error indicating the success or failure of the function.
-			 */
-			virtual Error RegisterAllEvents( EventOptions* pOpts ) = 0;
-
-			/*
-			 * De-register all events registered with the camera.
-			 *
-			 * @return An Error indicating the success or failure of the function.
-			 */
-			virtual Error DeregisterAllEvents( void ) = 0;
 
 			/*@}*/
 
