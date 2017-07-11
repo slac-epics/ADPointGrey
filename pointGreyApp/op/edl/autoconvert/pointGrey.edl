@@ -212,8 +212,8 @@ controlPv "$(P)$(R)Manufacturer_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -260,8 +260,8 @@ controlPv "$(P)$(R)PortName_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -317,8 +317,8 @@ controlPv "$(P)$(R)Model_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -356,12 +356,12 @@ x 172
 y 170
 w 160
 h 18
-controlPv "$(P)$(R)SerialNumber"
+controlPv "$(P)$(R)SerialNumber_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -404,12 +404,12 @@ x 172
 y 195
 w 160
 h 18
-controlPv "$(P)$(R)FirmwareVersion"
+controlPv "$(P)$(R)FirmwareVersion_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -447,12 +447,12 @@ x 172
 y 220
 w 160
 h 18
-controlPv "$(P)$(R)SoftwareVersion"
+controlPv "$(P)$(R)SDKVersion_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -853,8 +853,8 @@ controlPv "$(P)$(R)StrobeDelay"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format "exponential"
@@ -879,8 +879,8 @@ controlPv "$(P)$(R)StrobeDelay_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "exponential"
 nullColor index 32
@@ -936,8 +936,8 @@ controlPv "$(P)$(R)StrobeSource_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -998,8 +998,8 @@ controlPv "$(P)$(R)StrobeEnable_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -1060,8 +1060,8 @@ controlPv "$(P)$(R)StrobePolarity_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -1108,8 +1108,8 @@ controlPv "$(P)$(R)StrobeDuration"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format "exponential"
@@ -1134,8 +1134,8 @@ controlPv "$(P)$(R)StrobeDuration_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "exponential"
 nullColor index 32
@@ -1242,8 +1242,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -1299,8 +1299,8 @@ controlPv "$(P)$(R)TriggerPolarity_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -1361,8 +1361,8 @@ controlPv "$(P)$(R)TriggerSource_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -1442,8 +1442,8 @@ controlPv "$(P)$(R)TriggerDelayValAbs"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -1487,8 +1487,8 @@ controlPv "$(P)$(R)TriggerDelayValAbs_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -1516,8 +1516,8 @@ controlPv "$(P)$(R)SkipFrames"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -1561,8 +1561,8 @@ controlPv "$(P)$(R)SkipFrames_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -1604,8 +1604,8 @@ controlPv "$(P)$(R)TemperatureActual"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -1685,8 +1685,8 @@ controlPv "$(P)$(R)DroppedFrames_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -1733,8 +1733,8 @@ controlPv "$(P)$(R)CorruptFrames_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -1776,8 +1776,8 @@ controlPv "$(P)$(R)DriverDropped_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -1819,8 +1819,8 @@ controlPv "$(P)$(R)TransmitFailed_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -1980,8 +1980,8 @@ controlPv "$(P)$(R)AcquireTime"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -2006,8 +2006,8 @@ controlPv "$(P)$(R)AcquireTime_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2054,8 +2054,8 @@ controlPv "$(P)$(R)AcquirePeriod"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -2080,8 +2080,8 @@ controlPv "$(P)$(R)AcquirePeriod_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2265,8 +2265,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2290,8 +2290,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2329,8 +2329,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2353,8 +2353,8 @@ controlPv "$(P)$(R)MinX"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -2379,8 +2379,8 @@ controlPv "$(P)$(R)MinY"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -2406,8 +2406,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2449,8 +2449,8 @@ controlPv "$(P)$(R)SizeX"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -2475,8 +2475,8 @@ controlPv "$(P)$(R)SizeY"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -2502,8 +2502,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2527,8 +2527,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2652,8 +2652,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2677,8 +2677,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2701,8 +2701,8 @@ controlPv "$(P)$(R)Gain"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -2728,8 +2728,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -2753,8 +2753,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -2778,8 +2778,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2803,8 +2803,8 @@ font "helvetica-medium-r-8.0"
 fontAlign "center"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -2846,8 +2846,8 @@ controlPv "$(P)$(R)PixelFormat_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -2908,8 +2908,8 @@ controlPv "$(P)$(R)Format7Mode_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -2965,8 +2965,8 @@ controlPv "$(P)$(R)VideoMode_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -3013,8 +3013,8 @@ controlPv "$(P)$(R)FrameRate_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -3056,8 +3056,8 @@ controlPv "$(P)$(R)BinningMode_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -3113,8 +3113,8 @@ controlPv "$(P)$(R)ConvertPixelFormat_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -3161,8 +3161,8 @@ controlPv "$(P)$(R)TimeStampMode_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -3204,8 +3204,8 @@ controlPv "$(P)$(R)PacketSize"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -3230,8 +3230,8 @@ controlPv "$(P)$(R)PacketSize_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -3273,8 +3273,8 @@ controlPv "$(P)$(R)PacketDelay"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -3299,8 +3299,8 @@ controlPv "$(P)$(R)PacketDelayActual"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -3323,8 +3323,8 @@ controlPv "$(P)$(R)Bandwidth"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -3399,8 +3399,8 @@ controlPv "$(P)$(R)PacketSizeActual"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -3447,8 +3447,8 @@ controlPv "$(P)$(R)MaxPacketSize"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -3532,8 +3532,8 @@ controlPv "$(P)$(R)NumImages"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -3558,8 +3558,8 @@ controlPv "$(P)$(R)NumImages_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -3601,8 +3601,8 @@ controlPv "$(P)$(R)NumImagesCounter_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -3687,8 +3687,8 @@ controlPv "$(P)$(R)ImageMode_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -3813,9 +3813,9 @@ controlPv "$(P)$(R)DetectorState_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
+fgColor index 25
 fgAlarm
-bgColor index 2
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -3862,8 +3862,8 @@ controlPv "$(P)$(R)StatusMessage_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 2
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -3886,8 +3886,8 @@ controlPv "$(P)$(R)ArrayCounter"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -3931,8 +3931,8 @@ controlPv "$(P)$(R)ArrayCounter_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -3988,8 +3988,8 @@ controlPv "$(P)$(R)ArrayRate_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -4036,8 +4036,8 @@ controlPv "$(P)$(R)ArrayCallbacks_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format "string"
 nullColor index 32
@@ -4093,8 +4093,8 @@ controlPv "$(P)$(R)NumExposures"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -4119,8 +4119,8 @@ controlPv "$(P)$(R)NumExposures_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -4186,8 +4186,8 @@ controlPv "$(P)$(R)FrameRateValAbs"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 14
-bgColor index 51
+fgColor index 25
+bgColor index 5
 editable
 autoHeight
 format decimal
@@ -4212,8 +4212,8 @@ controlPv "$(P)$(R)FrameRateValAbs_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
@@ -4260,8 +4260,8 @@ controlPv "$(P)$(R)FrameRateOnOff_RBV"
 font "helvetica-medium-r-8.0"
 smartRefresh
 fastUpdate
-fgColor index 54
-bgColor index 4
+fgColor index 25
+bgColor index 5
 autoHeight
 format decimal
 nullColor index 32
