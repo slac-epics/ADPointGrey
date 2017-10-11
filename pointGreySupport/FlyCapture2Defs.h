@@ -1827,7 +1827,7 @@ namespace FlyCapture2
 
 	/*@}*/
 
-/* #pragma deprecated(hostPost) */
+#pragma deprecated(hostPost)
 }
 
 #endif // PGR_FC2_FLYCAPTURE2DEFS_H
