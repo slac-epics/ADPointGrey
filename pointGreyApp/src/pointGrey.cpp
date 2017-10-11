@@ -37,7 +37,7 @@ using namespace FlyCapture2;
 #include <epicsExport.h>
 
 #define DRIVER_VERSION      2
-#define DRIVER_REVISION     4
+#define DRIVER_REVISION     5
 #define DRIVER_MODIFICATION 0
 
 static const char *driverName = "pointGrey";
@@ -2149,12 +2149,12 @@ asynStatus pointGrey::createStaticEnums()
             for (rate=0; rate<NUM_FRAMERATES; rate++) {
                 frameRate = (FrameRate)rate;
                 if (frameRate == FRAMERATE_FORMAT7) continue;
-                asynPrint(pasynUserSelf, ASYN_TRACE_WARNING,
-                    "%s::%s called Camera::GetVideoModeAndFrameRateInfo, pCamera_=%p, videoMode=%d, frameRate%d, supported=%d\n",
-                    driverName, functionName, pCamera_, videoMode, frameRate, supported);
                 error = pCamera_->GetVideoModeAndFrameRateInfo(videoMode, frameRate, &supported);
                 if (checkError(error, functionName, "GetVideoModeAndFrameRateInfo")) 
                     return asynError;
+                asynPrint(pasynUserSelf, ASYN_TRACE_WARNING,
+                    "%s::%s called Camera::GetVideoModeAndFrameRateInfo, pCamera_=%p, videoMode=%d, frameRate%d, supported=%d\n",
+                    driverName, functionName, pCamera_, videoMode, frameRate, supported);
                 if (supported) modeSupported = true;
             }                  
         }

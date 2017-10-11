@@ -10,7 +10,7 @@
     <h1>
       Point Grey areaDetector driver</h1>
     <h2>
-      December 12, 2015</h2>
+      July 21, 2017</h2>
     <h2>
       Mark Rivers</h2>
     <h2>
@@ -48,9 +48,9 @@
   </p>
   <p>
     On Linux the Point Grey FlyCap2 SDK requires glibc version 2.14. This means it cannot
-    be used on RHEL 6, but it can be used on RHEL 7, and Fedora 15 and higher. For USB3
-    cameras kernel version 3.5.0. This means USB3 cameras require Fedora 18 or higher,
-    or RHEL 7.0 or higher.
+    be used on RHEL 6, but it can be used on RHEL 7, and Fedora 15 and higher. For USB
+    3.0 cameras kernel version 3.5.0 or higher is required. This means USB 3.0 cameras
+    require Fedora 18 or higher, or RHEL 7.0 or higher.
   </p>
   <p>
     This driver inherits from <a href="areaDetectorDoc.html#ADDriver">ADDriver</a>.
@@ -862,59 +862,6 @@
           EPICS record name </th>
         <th>
           EPICS record type </th>
-      </tr>
-      <tr>
-        <td align="center" colspan="7">
-          <b>Camera, firmware and software version information</b> </td>
-      </tr>
-      <tr>
-        <td>
-          PGSerialNumber </td>
-        <td>
-          asynInt32 </td>
-        <td>
-          r/o </td>
-        <td>
-          The camera serial number. This number can be used in the cameraId argument to pointGretConfig()
-          to select a specific camera for the EPICS IOC. </td>
-        <td>
-          PG_SERIAL_NUMBER </td>
-        <td>
-          $(P)$(R)SerialNumber </td>
-        <td>
-          longin </td>
-      </tr>
-      <tr>
-        <td>
-          PGFirmwareVersion </td>
-        <td>
-          asynOctet </td>
-        <td>
-          r/o </td>
-        <td>
-          The camera firmware version. </td>
-        <td>
-          PG_FIRMWARE_VERSION </td>
-        <td>
-          $(P)$(R)FirmwareVersion </td>
-        <td>
-          stringin </td>
-      </tr>
-      <tr>
-        <td>
-          PGSoftwareVersion </td>
-        <td>
-          asynOctet </td>
-        <td>
-          r/o </td>
-        <td>
-          The FlyCapture2 SDK software version. </td>
-        <td>
-          PG_SOFTWARE_VERSION </td>
-        <td>
-          $(P)$(R)SoftwareVersion </td>
-        <td>
-          stringin </td>
       </tr>
       <tr>
         <td align="center" colspan="7">
